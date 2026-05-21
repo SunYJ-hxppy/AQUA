@@ -78,7 +78,9 @@
           <h1 class="title is-2 publication-title">AQUA: Aligned Query Fusion for Reference-Unbiased and Temporally Consistent Video Motion Transfer</h1>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
-              Anonymous submission
+              Jiwoo Park*, Sunyoung Jung*, Yeonkyung Lee, Tae Eun Choi, and Seong Jae Hwang†
+              * Equal Contribution  † Corresponding Authors
+               Yonsei University
             </span>
           </div>  
         </div>
@@ -265,16 +267,14 @@
         <h2 class="title is-2">Method</h2>
           <div class="content has-text-justified">
             <div class="centerImage">
-              <img src="./static/images/fig4_overall_framework.png" alt="pipeline" width="100%">
+              <img src="./static/images/fig4_overview.png" alt="pipeline" width="100%">
             </div>
             <br>
             <p style="font-size: 15px;">
               <b>Overall framework of AQUA.</b>
-              (a) Given a reference video, we perform DDPM inversion to extract query features.
-              The noise from the inversion is then used to generate a video via DAWN and RTA, which utilize the query features.
-              (b) The reference and target queries are adaptively fused using a distribution-aware weight function D to guide motion transfer.
-              (c) Multi-frame attention output Ai is incorporated to enhance temporal consistency by utilizing contextual information from the
-              current frame (i), previous frame (i − 1), and first frame (1).
+              (a) Query features extracted via DDPM inversion guide video generation. 
+              (b) DAWN adaptively fuses reference and target queries via the discrepancy function D. 
+              (c) RAM ensures temporal consistency by aggregating attention outputs from the current (i), previous (i-1), and first frames.
             </p>
             <br>
             <br>
